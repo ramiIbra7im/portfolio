@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,50 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+/* إزالة أي margin أو padding من الـ body و الـ html */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* تهيئة Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #141e30, #243b55);
+  /* خلفية متدرجة */
+  width: 100%;
+  /* العرض 100% */
+  height: 100vh;
+  /* ارتفاع كامل الشاشة */
+  display: flex;
+  justify-content: center;
+  /* التوسيط أفقي */
+  align-items: center;
+  /* التوسيط عمودي */
+  padding: 0;
+}
+
+/* تخصيص الأزرار */
+.btn-outline-light {
+  border-radius: 25px;
+}
+
+.btn-light {
+  border-radius: 25px;
+}
+
+/* تخصيص المحتوى داخل الـ Hero */
+.text-center h1 {
+  font-size: 3.5rem;
+}
+
+.text-center h4 {
+  font-size: 1.5rem;
 }

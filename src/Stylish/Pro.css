@@ -1,0 +1,28 @@
+:root {
+    --white: #F5ECE0;
+    --blue-white: #5F99AE;
+    --red-cr: #F7374F;
+    --move: #693382;
+    --black-white: #050505fa;
+}
+
+
+body{
+    background-color: var(--black-white);
+}
+
+
+.project-card {
+    cursor: pointer;
+    /* يجعل الكارت قابلاً للنقر */
+    /* تأثير الانتقال عند التمرير */
+    transition: 0.5s ease;
+    color: var(--red-cr);
+    background-color: transparent;
+}
+
+.project-card:hover {
+    color:var(--red-cr);
+    scale:1.07;
+    /* اللون الأسمر الفاتح عند التمرير */
+}

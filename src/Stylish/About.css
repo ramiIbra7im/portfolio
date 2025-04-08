@@ -1,0 +1,13 @@
+:root {
+    --white: #F5ECE0;
+    --blue-white: #5F99AE;
+    --red-cr: #F7374F;
+    --move: #693382;
+    --black-white: #050505fa;
+}
+
+
+.about-description{
+    color: var(--white);
+}
+.about-name{color: var(--red-cr);}
