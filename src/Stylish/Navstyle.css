@@ -64,8 +64,18 @@
         width: 100%;
 }
 
+.navbar-toggler{
+    transition: 0.5s;
+    color: white;
+}
 
-
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar-toggler:hover{
+    transition: 0.5s;
+    scale: 1.1;
+}
 
 
 
@@ -105,20 +115,6 @@
         z-index: -1;
 }
 
-/* .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../bg.jpg');
-    background-position: center center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    filter: blur(3px);
-    z-index: -1;
-} */
 
 .text-center{color: var(--white);}
 

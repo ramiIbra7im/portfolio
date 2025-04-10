@@ -3,51 +3,41 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap'; 
 import { motion } from 'framer-motion';  // استيراد framer-motion
 import '../Stylish/Pro.css';
-import khImage from '../Images/kh.png';
+import khImage from '../Images/kwater.jpg';
+import loginimg from '../Images/login.jpg';
+import portfolio from '../Images/me-page.jpg';
+import todo from '../Images/todo.jpg';
 
 const projects = [
   {
     id: 1,
-    title: ' خواطر',
+    title: 'Posts',
     description: 'وصف قصير للمشروع الأول.',
     imageUrl:khImage,
     link: 'https://kawater.vercel.app/',
   },
   {
     id: 2,
-    title: 'المصحف',
+    title: 'Login Page',
     description: 'وصف قصير للمشروع الثاني.',
-    imageUrl: khImage,
-    link: 'https://elmoshaf.vercel.app/',
+    imageUrl: loginimg,
+    link: 'https://login-rb.vercel.app/',
   },
   {
     id: 3,
-    title: 'Q',
+    title: 'Portfolio ',
     description: 'وصف قصير للمشروع الثالث.',
-    imageUrl: khImage,
-    link: 'https://example.com/project3',
+    imageUrl: portfolio,
+    link: 'https://rb-ramy.vercel.app/',
   },
   {
     id: 4,
-    title: 'D',
+    title: 'To Do List ',
     description: 'وصف قصير للمشروع الثالث.',
-    imageUrl: khImage,
-    link: 'https://example.com/project3',
+    imageUrl: todo,
+    link: 'https://todo-rb.vercel.app/',
   },
-  {
-    id: 5,
-    title: 'C',
-    description: 'وصف قصير للمشروع الثالث.',
-    imageUrl: khImage,
-    link: 'https://example.com/project3',
-  },
-  {
-    id: 6,
-    title: 'A',
-    description: 'وصف قصير للمشروع الثالث.',
-    imageUrl: khImage,
-    link: 'https://example.com/project3',
-  },
+
 ];
 
 const ProjectsGrid = () => {
@@ -63,15 +53,14 @@ const ProjectsGrid = () => {
               rel="noopener noreferrer"
               className="text-decoration-none"
             >
-              {/* إضافة motion.div مع أنيميشن عند الظهور */}
               <motion.div
-                className="card  project-card "
-                initial={{ opacity: 0, y: 50 }}  // البداية (مخفية وأسفل)
-                animate={{ opacity: 1, y: 0 }}   // النهاية (ظهور في مكانه)
-                transition={{ duration: 0.6 }}   // فترة الانتقال
+                className="card  project-card border-0"
+                initial={{ opacity: 0, y: 80 }}  // البداية (مخفية وأسفل)
+                animate={{ opacity: 1, y: 20 }}   // النهاية (ظهور في مكانه)
+                transition={{ duration: 0.3 }}   // فترة الانتقال
               >
                 <img src={project.imageUrl} className="card-img-top " alt={project.title} />
-                <h5 className="card-title fw-bold fs-3 text-center">{project.title}</h5>
+                <h5 className="card-title fw-bold fs-3 text-center pt-3">{project.title}</h5>
               </motion.div>
             </a>
           </Col>

@@ -14,8 +14,6 @@ body{
 
 .project-card {
     cursor: pointer;
-    /* يجعل الكارت قابلاً للنقر */
-    /* تأثير الانتقال عند التمرير */
     transition: 0.5s ease;
     color: var(--red-cr);
     background-color: transparent;
@@ -24,5 +22,5 @@ body{
 .project-card:hover {
     color:var(--red-cr);
     scale:1.07;
-    /* اللون الأسمر الفاتح عند التمرير */
+    
 }
