@@ -7,6 +7,7 @@ import khImage from '../Images/kwater.jpg';
 import loginimg from '../Images/login.jpg';
 import portfolio from '../Images/me-page.jpg';
 import todo from '../Images/todo.jpg';
+import calc from '../Images/calc.jpg';
 
 const projects = [
   {
@@ -36,6 +37,13 @@ const projects = [
     description: 'وصف قصير للمشروع الثالث.',
     imageUrl: todo,
     link: 'https://todo-rb.vercel.app/',
+  },
+  {
+    id: 4,
+    title: 'Calculator',
+    description: 'وصف قصير للمشروع الثالث.',
+    imageUrl: calc,
+    link: 'https://calculator-olive-iota.vercel.app/',
   },
 
 ];
