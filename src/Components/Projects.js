@@ -8,6 +8,7 @@ import loginimg from '../Images/login.jpg';
 import portfolio from '../Images/me-page.jpg';
 import todo from '../Images/todo.jpg';
 import calc from '../Images/calc.jpg';
+import age from '../Images/age.jpg';
 
 const projects = [
   {
@@ -44,6 +45,13 @@ const projects = [
     description: 'وصف قصير للمشروع الثالث.',
     imageUrl: calc,
     link: 'https://calculator-olive-iota.vercel.app/',
+  },
+  {
+    id: 5,
+    title: 'Age Calculator',
+    description: 'وصف قصير للمشروع الثالث.',
+    imageUrl: age,
+    link: 'https://age-rb.vercel.app/',
   },
 
 ];

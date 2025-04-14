@@ -10,7 +10,6 @@ function Home() {
 
     return (
         <>
-    
         <section className="hero-section  text-white d-flex justify-content-center align-items-center min-vh-100">
             <div className="text-center">
                 <h1 className="display-3 fw-bold mb-4">I'm Ramy Ibrahim</h1>

@@ -106,15 +106,25 @@
 
 
 .hero-section {
-    /* position: relative;
-    overflow: hidden; */
-    background-image: url('../bg.jpg');
+    position: relative;
+    overflow: hidden;
+    background-image: url('../Images/me-page.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        z-index: -1;
+        z-index: 0;
 }
+.hero-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    z-index: -1;
 
+}
 
 .text-center{color: var(--white);}
 
