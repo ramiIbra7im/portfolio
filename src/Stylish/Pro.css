@@ -24,3 +24,41 @@ body{
     scale:1.07;
     
 }
+
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.4s ease;
+}
+
+/* التأثير اللي عملته قبل كده */
+.project-card:hover img {
+    filter: brightness(30%);
+}
+
+/* النص اللي بيظهر فوق الصورة */
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    /* عشان ميمنعش الضغط على العنصر */
+}
+
+.project-card:hover .overlay-text {
+    opacity: 1;
+}

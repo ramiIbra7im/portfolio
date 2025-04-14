@@ -62,7 +62,7 @@ const ProjectsGrid = () => {
       <h1 className=' p-3 fw-bold display-3 text-white text-center'>My project</h1>
       <Row>
         {projects.map((project) => (
-          <Col md={4} className="mb-4" key={project.id}>
+          <Col md={4} className="mb-4 " key={project.id}>
             <a
               href={project.link}
               target="_blank"
@@ -70,13 +70,16 @@ const ProjectsGrid = () => {
               className="text-decoration-none"
             >
               <motion.div
-                className="card  project-card border-0"
+                className="card   project-card border-0"
                 initial={{ opacity: 0, y: 80 }}  // البداية (مخفية وأسفل)
                 animate={{ opacity: 1, y: 20 }}   // النهاية (ظهور في مكانه)
                 transition={{ duration: 0.3 }}   // فترة الانتقال
               >
                 <img src={project.imageUrl} className="card-img-top " alt={project.title} />
                 <h5 className="card-title fw-bold fs-3 text-center pt-3">{project.title}</h5>
+                   <div className="overlay-text d-flex justify-content-center align-items-center">
+                     Go Website
+                   </div>
               </motion.div>
             </a>
           </Col>
