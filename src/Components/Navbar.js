@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Stylish/Navstyle.css';
-// import '/logo2.png';
 
 function Navbar() {
   const [isVisible, setIsVisible] = useState(false); // حالة لتفعيل الـ Animation
@@ -16,7 +15,7 @@ function Navbar() {
     <nav className={`navbar navbar-expand-lg navbar-dark shadow-sm p-1 ${isVisible ? 'visible' : ''}`}>
       <div className="container">
          <Link className="navbar-brand p-0 m-0" to="/">
-          <img src="/Logo2.png" alt="Logo" style={{ width: '60px', height: '60px' }} />
+          <img src="/logo2.png" alt="Logo" style={{ width: '60px', height: '60px' }} />
          </Link>
         <button
           className="navbar-toggler"
