@@ -4,7 +4,7 @@ import profilePic from '../Images/me.jpg'; // تأكد من أن الصورة م
 
 const About = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5 co-about">
       <h2 className="text-center mb-4 display-4 fw-bold">About Me</h2>
       <div className="row align-items-center">
         {/* الصورة */}
@@ -17,9 +17,9 @@ const About = () => {
         </div>
         
         {/* النص */}
-        <div className="col-md-8 ">
+        <div className="col-md-8  ">
           <h3 className="about-name">Ramy Ibrahim</h3>
-          <p className="about-description lh-2 fs-5">
+          <p className="about-description lh-2 fs-5 fw-bold">
             Hello! I'm Ramy Ibrahim, 
  a Front-End developer with experience in transforming designs into interactive and visually appealing interfaces. I possess strong skills in HTML, CSS, and JavaScript, and I leverage the latest web development technologies to create fast and efficient websites. I focus on designing user-friendly interfaces that ensure a smooth and enjoyable experience for users. Additionally, I have experience working with libraries and frameworks like React,Next, which enhances my ability to build complex and flexible web applications.
 

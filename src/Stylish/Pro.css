@@ -7,9 +7,18 @@
 }
 
 
-body{
-    background-color: var(--black-white);
+.main-project{
+    color: black;
+            background-image: linear-gradient(-45deg, #ED92AA 40%, #F0B052 100%);
+            border-radius: 40px;
+            
 }
+
+
+.co-fluid{
+        background-image: linear-gradient(to bottom,#ffffff 10%, #f4ffe7 100%);
+        margin-top: 100px;
+    }
 
 
 .project-card {
@@ -17,6 +26,7 @@ body{
     transition: 0.5s ease;
     color: var(--red-cr);
     background-color: transparent;
+    border-radius: 20px;
 }
 
 .project-card:hover {
@@ -36,6 +46,7 @@ body{
     width: 100%;
     height: auto;
     transition: filter 0.4s ease;
+    
 }
 
 /* التأثير اللي عملته قبل كده */

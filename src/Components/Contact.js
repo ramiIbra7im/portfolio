@@ -37,7 +37,7 @@ const Contact = () => {
 
     return (
     //   alert
-      <div className="container py-5">
+      <div className="container-fluid co-contact  mt-5 py-5">
            {showAlert && (
               <div className=" col-3 m-auto  alert alert-success mt-2 mb-5 text-center fw-bold" role="alert">
                   Send Sucsess
@@ -47,14 +47,14 @@ const Contact = () => {
 
 
 
-      <h2 className="text-center mb-4 display-4 fw-bold">Contact Me</h2>
-      <form onSubmit={handleSubmit} className=' p-3 col-lg-8 m-auto form'>
-        <div className="mb-3 col-lg-6 col-sm-12 m-auto">
+      <h2 className="text-center mb-4  display-4 fw-bold">Contact Me</h2>
+      <form onSubmit={handleSubmit} className=' p-3 col-lg-8 m-auto form shadow'>
+        <div className="mb-3 col-lg-6 col-sm-12 m-auto ">
           <input
             type="text"
             id="name"
             name="name"
-            className="form-control  fw-bold"
+            className="form-control  fw-bold" 
             value={formData.name}
             onChange={handleChange}
             placeholder="Name"
@@ -94,7 +94,7 @@ const Contact = () => {
             href="https://wa.me/201551212431"
             target="_blank"
             rel="noopener noreferrer"
-            className=" fs-1 ic"
+            className=" fs-1 ic text-black"
           >
             <FaWhatsapp />
           </a>
@@ -102,7 +102,7 @@ const Contact = () => {
             href="https://facebook.com/Ramiibra7im"
             target="_blank"
             rel="noopener noreferrer"
-            className=" fs-1 ic"
+            className=" fs-1 ic text-black"
           >
             <FaFacebook />
           </a>

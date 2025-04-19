@@ -11,3 +11,13 @@
     color: var(--white);
 }
 .about-name{color: var(--red-cr);}
+
+.co-about{
+    margin-top: 80px;
+    border-top: 3px solid #F7374F;
+    border-radius: 50%;
+}
+.about-description{
+    color: black;
+    
+}

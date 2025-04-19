@@ -19,7 +19,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="container py-5">
+    <div className="container mt-5 py-5">
       <h2 className="text-center mb-4 display-4 fw-bold">My Skills</h2>
       <div className="row justify-content-center">
         {skills.map((skill, index) => (
@@ -30,7 +30,7 @@ const Skills = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="skill-card text-center p-3 shadow-sm rounded">
+            <div className="skill-card text-center p-3 shadow rounded">
               <div className="mb-2">{skill.icon}</div>
               <h5 className="skill-name fw-bold">{skill.name}</h5>
             </div>

@@ -12,15 +12,15 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark shadow-sm p-1 ${isVisible ? 'visible' : ''}`}>
-      <div className="container">
-         <Link className="navbar-brand p-0 m-0" to="/">
-          <img src="/logo2.png" alt="Logo" style={{ width: '60px', height: '60px' }} />
+<nav className={`navbar navbar-expand-lg shadow-sm p-1 ${isVisible ? 'visible' : ''} fixed-top`}>
+      <div className="container ">
+         <Link className="navbar-brand p-0 m-0 " to="/">
+          <img src="/logo2.svg" alt="Logo" style={{ width: '60px', height: '60px' }} />
          </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
+          data-bs-toggle="collapse" 
           data-bs-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>

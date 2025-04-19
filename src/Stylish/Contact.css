@@ -6,24 +6,27 @@
     --black-white: #050505fa;
 }
 .form{
-    border-radius:10px ;
-    border: var(--red-cr) solid 2px;
+    border-radius:10px 300px;
+    background-color: white;    
+}
+.co-contact{
+    background-color: #fafafa;
 }
 
 .form-control{
     background-color:transparent;
     border: none;
     border-radius: 0%;
-    border-bottom: 2px var(--white) solid;
+    border-bottom: 2px var(--black-white) solid;
     transition: 0.5s ease;
-    color: var(--white);
+    color: black;
 }
-.form-control:focus,.form-control:hover{
+.form-control:focus,.form-control:hover{ 
     background-color:transparent;
     border: none;
     border-radius: 0%;
     border-bottom: 2px var(--red-cr) solid;
-    color: var(--white);
+    color: var(--black-white);
     box-shadow: none;
     scale: 1.05;
     font-weight: 400;
@@ -32,7 +35,7 @@
 
 
 .form-control::placeholder{
-    color: var(--white);
+    color:  black;
     font-weight: 600;
     
 }
@@ -42,10 +45,11 @@
 }
 
 
-.btn_trns{border: 3px solid var(--white);
+.btn_trns{
+    border: 3px solid black;
     transition: 0.5s;
     text-decoration: none;
-    color: var(--white);
+    color: black;
     border-radius: 10px;
     background-color: transparent;
 }

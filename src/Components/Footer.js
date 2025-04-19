@@ -4,7 +4,7 @@ import '../Stylish/Navstyle.css'
 
 const Footer = () => {
   return (
-    <footer className="footer text-white text-center py-4 mt-5">
+    <footer className="footer text-white text-center py-4 ">
       <div className="container">
         <p className="mb-2 fw-bold ">CopyRight © {new Date().getFullYear()} <span className='name fw-bolder'>Ramy Ibrahim</span> </p>
 
