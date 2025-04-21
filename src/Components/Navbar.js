@@ -15,18 +15,18 @@ function Navbar() {
 <nav className={`navbar navbar-expand-lg shadow-sm p-1 ${isVisible ? 'visible' : ''} fixed-top`}>
       <div className="container ">
          <Link className="navbar-brand p-0 m-0 " to="/">
-          <img src="/logo2.svg" alt="Logo" style={{ width: '60px', height: '60px' }} />
+          <img src="/logo2.svg" alt="Logo" style={{ width: '50px', height: '50px' }} />
          </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse" 
+          data-bs-toggle="collapse"  
           data-bs-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse " id="navbarNav">
           <ul className="navbar-nav ms-auto fw-bold">
             <li className="nav-item pe-3">
               <NavLink to="/" className="nav-link">Home</NavLink>

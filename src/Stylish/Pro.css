@@ -6,20 +6,16 @@
     --black-white: #050505fa;
 }
 
-
-.main-project{
+.main-project {
     color: black;
-            background-image: linear-gradient(-45deg, #ED92AA 40%, #F0B052 100%);
-            border-radius: 40px;
-            
+    background-image: linear-gradient(-45deg, #ED92AA 40%, #F0B052 100%);
+    border-radius: 40px;
 }
 
-
-.co-fluid{
-        background-image: linear-gradient(to bottom,#ffffff 10%, #f4ffe7 100%);
-        margin-top: 100px;
-    }
-
+.co-fluid {
+    background-image: linear-gradient(to bottom, #ffffff 10%, #f4ffe7 100%);
+    margin-top: 100px;
+}
 
 .project-card {
     cursor: pointer;
@@ -27,14 +23,13 @@
     color: var(--red-cr);
     background-color: transparent;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-    color:var(--red-cr);
-    scale:1.07;
-    
+    scale: 1.07;
 }
-
 
 .image-wrapper {
     position: relative;
@@ -42,14 +37,12 @@
 }
 
 .image-wrapper img {
-    display: block;
     width: 100%;
     height: auto;
     transition: filter 0.4s ease;
-    
+    border-radius: 20px;
 }
 
-/* التأثير اللي عملته قبل كده */
 .project-card:hover img {
     filter: brightness(30%);
 }
@@ -67,7 +60,10 @@
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
-    /* عشان ميمنعش الضغط على العنصر */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
 }
 
 .project-card:hover .overlay-text {

@@ -8,7 +8,10 @@
 
 
 
-.navbar{background-color:white ;}
+.navbar{
+    background-color:transparent ;
+    backdrop-filter: blur(10px);
+}
 
 /* تأثير الحركة للروابط داخل الـ Navbar */
 .navbar-nav .nav-item {
@@ -171,7 +174,10 @@ width: 300px;
 
 
 /* footer */
-.footer{background-color: var(--black-white);}
+.footer{
+    background-color: var(--black-white);
+    display: block;
+}
 
 .ic{
    transition: 0.3s ease;

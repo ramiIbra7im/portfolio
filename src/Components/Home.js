@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ChangingText from './ChangingText';
 import '../Stylish/Navstyle.css';
-import ProjectsGrid from './Projects';
 import  hero from '../Images/hero.png'
+import Price from './Price';
+import '../App.css'
 
 
 function Home() {
@@ -25,8 +26,8 @@ function Home() {
             </div>
                                     <img src={hero} alt='' style={{width:"60%"}} className='col'/>
 
-        </section>
-        <ProjectsGrid/>
+            </section>
+            <Price/>
     </>
     );
 }

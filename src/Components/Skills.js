@@ -1,8 +1,9 @@
 import React from 'react';
 import '../Stylish/Skills.css';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaGithub, FaPlug } from 'react-icons/fa';
-import { SiAdobeillustrator, SiAdobephotoshop, SiNextdotjs } from 'react-icons/si';
+import {  SiNextdotjs } from 'react-icons/si';
 import { motion } from 'framer-motion';
+import { TbBrandFramerMotion } from 'react-icons/tb';
 
 const skills = [
   { name: 'HTML', icon: <FaHtml5 className="skill-icon" /> },
@@ -13,8 +14,8 @@ const skills = [
   { name: 'Bootstrap', icon: <FaBootstrap className="skill-icon" /> },
   { name: 'API', icon: <FaPlug className="skill-icon" /> },
   { name: 'GitHub', icon: <FaGithub className="skill-icon" /> },
-  { name: 'Photoshop', icon: <SiAdobephotoshop className="skill-icon" /> },
-  { name: 'Illustrator', icon: <SiAdobeillustrator className="skill-icon" /> },
+  { name: 'Framer Motio', icon: <TbBrandFramerMotion className="skill-icon" /> },
+
 ];
 
 const Skills = () => {
