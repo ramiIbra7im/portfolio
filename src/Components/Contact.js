@@ -89,23 +89,29 @@ const Contact = () => {
           <button type="submit" className="btn_trns p-2 pe-5 ps-5 fw-bold">Send</button>
         </div>
       </form>
- <div className="d-flex justify-content-center gap-4">
+        <div className="d-flex justify-content-center gap-4 container mt-5">
+          <div className=' col-lg-3 p-2 text-center contet-link'>
+           
           <a
             href="https://wa.me/201551212431"
             target="_blank"
             rel="noopener noreferrer"
-            className=" fs-1 ic text-black"
-          >
-            <FaWhatsapp />
-          </a>
+            className=" display-2 ic  text-black"
+            ><FaWhatsapp />
+            </a>
+          </div>
+          <div className=' p-2 col-lg-3 text-center  contet-link'>
           <a
             href="https://facebook.com/Ramiibra7im"
             target="_blank"
             rel="noopener noreferrer"
-            className=" fs-1 ic text-black"
+            className=" display-2 ic text-black"
           >
             <FaFacebook />
-          </a>
+            </a>
+            
+          </div>
+          
         </div>
      
     </div>

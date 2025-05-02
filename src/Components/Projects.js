@@ -10,6 +10,7 @@ import todo from '../Images/todo.jpg';
 import calc from '../Images/calc.jpg';
 import age from '../Images/age.jpg';
 import landing from '../Images/Landing.jpg';
+import foodheat from '../Images/foodheat.jpg';
 
 const projects = [
   {
@@ -61,21 +62,28 @@ const projects = [
     imageUrl: landing,
     link: 'https://page-rb.vercel.app/',
   },
+  {
+    id: 8,
+    title: 'Food Store',
+    description: 'وصف قصير للمشروع السابع.',
+    imageUrl: foodheat,
+    link: 'https://foodheat.vercel.app/',
+  },
 ];
 
 const ProjectsGrid = () => {
   return (
     <div className="container-fluid co-fluid p-2 pt-5">
-      <div className="container main-project p-3">
+      <div className="container main-project p-5">
         <h1 className="p-3 fw-bold display-3 text-center">My Projects</h1>
         <Row>
           {projects.slice().reverse().map((project) => (
-            <Col md={4} className="mb-4" key={project.id}>
+            <Col md={4} className="mb-4 " key={project.id}>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-decoration-none"
+                className="text-decoration-none "
               >
                 <motion.div
                   className="card project-card border-0"

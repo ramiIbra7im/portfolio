@@ -12,7 +12,7 @@
 @media (max-width: 768px) {
     .form {
         border-radius: 20px;
-    }
+    } 
 }
 .co-contact{
     background-color: #fafafa;
@@ -71,4 +71,9 @@
     transition: 0.5s;
     background-color: var(--white);
     color: green;
+}
+
+.contet-link{
+    border: 2px solid black;
+    border-radius: 8px;
 }
