@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     //   alert
-    <div className="container-fluid co-contact  min=vgh py-5">
+    <div className="container-fluid co-contact  min-vh-100 py-5">
       {showAlert && (
         <div className=" col-3 m-auto  alert alert-success mt-2 mb-5 text-center fw-bold" role="alert">
           Send Sucsess
