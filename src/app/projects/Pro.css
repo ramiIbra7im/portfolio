@@ -1,0 +1,71 @@
+:root {
+    --white: #F5ECE0;
+    --blue-white: #5F99AE;
+    --red-cr: #F7374F;
+    --move: #693382;
+    --black-white: #050505fa;
+}
+
+.main-project {
+    color: black;
+    background-color: var(--color2);
+    border-radius: 40px;
+    margin-top: 7rem;
+}
+
+.co-fluid {
+    background-color: var(--color1);
+}
+
+.project-card {
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: var(--color3);
+    background-color: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.4s ease;
+    border-radius: 20px;
+}
+
+.project-card:hover img {
+    filter: brightness(30%);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.project-card:hover .overlay-text {
+    opacity: 1;
+}
+
+.tech-pill {
+    background-color: var(--color4);
+}

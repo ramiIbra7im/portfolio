@@ -1,0 +1,176 @@
+.content-Price {
+    margin-top: 40px;
+}
+
+.pricing {
+
+    cursor: pointer;
+}
+
+.price-co {
+    /* background-color: #FAFAFA; */
+    background-color: var(--color1);
+}
+
+
+
+
+.price1:hover {
+    transform: scale(1.05) !important;
+    border-radius: 2px green solid;
+}
+
+.price1 {
+    background-color: #fee7ff;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.price1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px 20px 100% 100%;
+    width: 90%;
+    height: 20%;
+    background-image: linear-gradient(90deg, #410445 0%, #A5158C 100%);
+    z-index: -1;
+    margin: 20px;
+}
+
+.price1 * {
+    z-index: 2;
+}
+
+
+
+
+.price2:hover {
+    transform: scale(1.05) !important;
+}
+
+.price2 {
+    background-color: #fff1c5;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease;
+
+}
+
+.price2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px 20px 100% 100%;
+    width: 90%;
+    height: 20%;
+    background-image: linear-gradient(90deg, #007074 0%, #034C53 100%);
+    z-index: -1;
+    margin: 20px;
+}
+
+.price2 * {
+    z-index: 2;
+}
+
+
+
+
+
+.price3:hover {
+    transform: scale(1.05) !important;
+    /* استخدم !important لتجاوز تأثيرات AOS */
+}
+
+
+.price3 {
+    will-change: transform;
+    background-color: #e2ffff;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.price3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px 20px 100% 100%;
+    width: 90%;
+    height: 20%;
+    background-image: linear-gradient(to top, #210F37 0%, #4F1C51 100%);
+    z-index: -1;
+    margin: 20px;
+}
+
+.price3 * {
+    z-index: 2;
+}
+
+
+
+
+
+
+.price2 {
+    border-radius: 20px;
+}
+
+.price3 {
+    border-radius: 20px;
+}
+
+.check {
+    color: green;
+    font-size: 30px;
+}
+
+.x {
+    color: red;
+    font-size: 30px;
+}
+
+.btn-get-start {
+    background-color: #4F4CB5;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s ease;
+
+}
+
+.btn-get-start:hover {
+    background-color: #518DF8;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.icon-gift {
+    color: green;
+}
+
+.gift-co {
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+.warning-co {
+    border: 2px solid rgb(209, 209, 0);
+    border-radius: 10px;
+}
+
+.icon-warning {
+    color: rgb(209, 209, 0);
+}

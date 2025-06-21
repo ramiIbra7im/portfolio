@@ -1,0 +1,98 @@
+.form {
+    border-radius: 10px 300px;
+    background-color: var(--color2);
+}
+
+@media (max-width: 768px) {
+    .form {
+        border-radius: 20px;
+    }
+}
+
+.co-contact {
+    background-color: var(--color1);
+}
+
+.form-control {
+    background-color: transparent;
+    border: none;
+    border-radius: 0%;
+    border-bottom: 2px var(--color3) solid;
+    transition: 0.5s ease;
+    color: var(--color3);
+}
+
+.form-control:focus,
+.form-control:hover {
+    background-color: transparent;
+    border: none;
+    border-radius: 0%;
+    border-bottom: 2px var(--color4) solid;
+    color: var(--color4);
+    box-shadow: none;
+    scale: 1.05;
+    font-weight: 400;
+}
+
+
+
+.form-control::placeholder {
+    color: var(--color3);
+    font-weight: 600;
+
+}
+
+.form-control:focus::placeholder,
+.form-control:not(:placeholder-shown)::placeholder {
+    color: var(--color4);
+}
+
+
+.btn_trns {
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--color1);
+    border-radius: 10px;
+    background-color: var(--color3);
+}
+
+.btn_trns:hover {
+    color: var(--color3);
+    text-decoration: none;
+    transform: scale(1.05);
+    letter-spacing: 3px;
+    background-color: transparent;
+}
+
+.alert {
+    transition: 0.5s;
+    background-color: var(--color3);
+    color: green;
+}
+
+.contet-link {
+    border: 2px solid var(--color3);
+    border-radius: 8px;
+}
+
+.text-decoration-none,
+.content-title {
+    color: var(--color3);
+    transition: 0.5s all;
+}
+
+.text-decoration-none:hover {
+    transform: translateX(4px) rotate(5deg);
+    transition: 0.5s ease;
+}
+
+.text-decoration-none:hover .icon {
+    transform: rotateY(360deg);
+    color: var(--color4);
+    /* لو حابب تغير اللون مثلاً */
+    transition: 1s ease;
+}
+
+.icon {
+    transition: 0.5s all;
+}

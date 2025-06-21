@@ -1,0 +1,330 @@
+.navbar {
+    background-color: var(--color1);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+/* زر التوجل */
+.navbar-toggler {
+    transition: 0.5s;
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:hover {
+    scale: 1.1;
+}
+
+.nav-link {
+    color: var(--color3);
+}
+
+
+.custom-toggler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.custom-toggler span {
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* زر التوجل يتحول لـ X عند الفتح */
+.navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* الروابط */
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.5s ease;
+    color: var(--color3);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color4);
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color4);
+    transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.span-dot {
+    color: var(--color4);
+}
+
+/* أنيميشن العناصر */
+.navbar-nav .nav-item {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+/* عند الفتح */
+.navbar-collapse.show .nav-item {
+    animation: fadeSlideIn 0.6s ease forwards;
+}
+
+/* تأخير الدخول */
+.navbar-collapse.show .nav-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.navbar-collapse.show .nav-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.navbar-collapse.show .nav-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.navbar-collapse.show .nav-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.navbar-collapse.show .nav-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* أنيميشن الدخول */
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav .nav-item {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.des-hero {
+    color: var(--color4);
+}
+
+.hero-section {
+    background-color: var(--color1);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-hero {
+    background-color: var(--color2);
+}
+
+.hero-outer {
+    position: relative;
+    width: 90vw;
+    max-width: 550px;
+    aspect-ratio: 1 / 1;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.floating-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #0dcaf0;
+    border-radius: 50%;
+    animation: float 6s linear infinite;
+    opacity: 0.6;
+}
+
+
+.hero-outer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* الشريط الدائري */
+.rotating-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #0dcaf0;
+    /* لون الشريط */
+    animation: rotate 4s linear infinite;
+    z-index: 1;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.particale {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    z-Index: 0;
+
+}
+
+
+.title-hero {
+    color: var(--color3);
+}
+
+.p-hero {
+    color: var(--color4);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn_home {
+    border: 2px solid var(--color4);
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--color3);
+    border-radius: 10px;
+}
+
+.btn_home:hover {
+    color: var(--black-white);
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: var(--color3);
+}
+
+
+.btn_home:active {
+    transform: scale(1);
+
+}
+
+
+.dd {
+    background-color: #F7374F;
+    height: 100vb;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    background-color: var(--color2);
+    display: block;
+}
+
+.ic {
+    transition: 0.3s ease;
+    color: var(--white);
+}
+
+.ic:hover {
+    color: var(--color4);
+    scale: 1.1;
+}
+
+.name {
+    transition: 0.6s ease;
+    color: var(--color4);
+}
+
+.name:hover {
+    color: var(--color4);
+    letter-spacing: 2px;
+}

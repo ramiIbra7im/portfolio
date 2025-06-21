@@ -1,0 +1,34 @@
+.main-skils {
+    background-color: var(--color1);
+}
+
+.title-skils {
+    color: var(--color3);
+}
+
+.skill-card {
+    transition: all 0.5s ease;
+    background-color: var(--color3);
+}
+
+
+.skill-card:hover,
+.skill-card:hover .skill-name {
+    box-shadow: 0 4px 10px var(--color3);
+    cursor: pointer;
+    color: var(--color4);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+
+}
+
+
+.skill-icon {
+    font-size: 2.5rem;
+}
+
+.skill-name {
+    color: black;
+}

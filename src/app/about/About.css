@@ -1,0 +1,29 @@
+.about-description,
+.title {
+    color: var(--color3);
+}
+
+.about-name {
+    color: var(--color4);
+}
+
+.co-about {
+    margin-top: 80px;
+    border-top: 3px solid #F7374F;
+    border-radius: 50%;
+}
+
+.about-main {
+    background-color: var(--color1);
+}
+
+@media (max-width: 768px) {
+    .co-about {
+        border-radius: 300px;
+    }
+}
+
+.about-description {
+    color: var(--color3);
+
+}
