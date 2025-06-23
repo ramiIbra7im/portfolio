@@ -6,6 +6,7 @@ import Skills from "./skills/page";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import ChangingText from "./components/ChangingText";
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 export default function Home() {
   const titles = [
     "Front End Developer",
@@ -24,6 +25,7 @@ export default function Home() {
 
   return (
     <>
+
       <div className="position-relative min-vh-100 overflow-hidden text-white hero-section">
         {/* Particles */}
         <div className="particale" />

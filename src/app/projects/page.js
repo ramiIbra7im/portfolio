@@ -8,7 +8,7 @@ import './Pro.css';
 
 import khImage from '../../../public/Images/kwater.jpg';
 import loginimg from '../../../public/Images/login.jpg';
-import portfolio from '../../../public/Images/me-page.jpg';
+import portfolio from '../../../public/Images/me-page.png';
 import todo from '../../../public/Images/todo.jpg';
 import calc from '../../../public/Images/calc.jpg';
 import age from '../../../public/Images/age.jpg';

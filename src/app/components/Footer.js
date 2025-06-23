@@ -1,4 +1,4 @@
-import Link from 'next/link';
+'use client';
 import React from 'react';
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import '../Navstyle.css'

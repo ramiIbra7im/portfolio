@@ -5,23 +5,35 @@
     z-index: 1000;
 }
 
+
 /* زر التوجل */
 .navbar-toggler {
     transition: 0.5s;
-    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
     background: transparent;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .navbar-toggler:hover {
     scale: 1.1;
+
 }
 
 .nav-link {
     color: var(--color3);
+}
+
+.nav-link.active {
+    color: var(--color4) !important;
+    font-weight: bold;
+    /* اختياري للتأكيد */
 }
 
 
