@@ -14,6 +14,7 @@ import calc from '../../../public/Images/calc.jpg';
 import age from '../../../public/Images/age.jpg';
 import landing from '../../../public/Images/Landing.jpg';
 import foodheat from '../../../public/Images/foodheat.jpg';
+import muslim from '../../../public/Images/muslim.png';
 
 const projects = [
     {
@@ -34,11 +35,11 @@ const projects = [
     },
     {
         id: 3,
-        title: 'Portfolio',
-        type: 'Portfolio Website',
-        tech: ['Next.js', 'Bootstrap', 'Framer Motion'],
-        imageUrl: portfolio,
-        link: 'https://rb-ramy.vercel.app/',
+        title: 'Age Calculator',
+        type: 'Tool',
+        tech: ['React ', ' Date Logic'],
+        imageUrl: age,
+        link: 'https://age-rb.vercel.app/',
     },
     {
         id: 4,
@@ -56,13 +57,14 @@ const projects = [
         imageUrl: calc,
         link: 'https://calculator-olive-iota.vercel.app/',
     },
+
     {
         id: 6,
-        title: 'Age Calculator',
-        type: 'Tool',
-        tech: ['React ', ' Date Logic'],
-        imageUrl: age,
-        link: 'https://age-rb.vercel.app/',
+        title: 'Portfolio',
+        type: 'Portfolio Website',
+        tech: ['Next.js', 'Bootstrap', 'Framer Motion'],
+        imageUrl: portfolio,
+        link: 'https://rb-ramy.vercel.app/',
     },
     {
         id: 7,
@@ -80,6 +82,15 @@ const projects = [
         imageUrl: foodheat,
         link: 'https://foodheat.vercel.app/',
     },
+    {
+        id: 9,
+        title: 'Muslim',
+        type: 'نسك المسلم',
+        tech: ['Next.js', 'Bootstrap', 'API Integration', 'Card Layout'],
+        imageUrl: muslim,
+        link: 'https://muslim-rb.vercel.app/', // عدل باللينك الحقيقي لموقعك
+    },
+
 ];
 
 const ProjectsGrid = () => {
@@ -105,30 +116,29 @@ const ProjectsGrid = () => {
                                     whileHover={{ scale: 1.02, rotate: 1 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
-                                    <Image
-                                        src={project.imageUrl}
-                                        alt={project.title}
-                                        width={500}
-                                        height={300}
-                                        className="card-img-top"
-                                        style={{ objectFit: "cover", width: "100%", height: "220px" }}
-                                    />
-                                    <h5 className="card-title fw-bold fs-3 text-center pt-3">{project.type}</h5>
-
-
-                                    <div className="tech-stack text-center mb-2 d-flex flex-wrap justify-content-center gap-2">
-                                        {project.tech.map((item, index) => (
-                                            <p key={index} className="tech-pill px-2 p-1 fw-bold rounded">
-                                                {item}
-                                            </p>
-                                        ))}
+                                    <div >
+                                        <Image
+                                            src={project.imageUrl}
+                                            alt={project.title}
+                                            width={500}
+                                            height={300}
+                                            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                                        />
                                     </div>
 
+                                    <h5 className="card-title fw-bold fs-3 text-center pt-3">{project.type}</h5>
+
+                                    <div className="tech-stack text-center  mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                        {project.tech.map((item, index) => (
+                                            <p key={index} className="tech-pill fs-6  fw-bold p-1  rounded">{item}</p>
+                                        ))}
+                                    </div>
 
                                     <div className="overlay-text d-flex justify-content-center align-items-center">
                                         Go to project
                                     </div>
                                 </motion.div>
+
                             </a>
                         </Col>
                     ))}
