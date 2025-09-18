@@ -15,6 +15,7 @@ import age from '../../../public/Images/age.jpg';
 import landing from '../../../public/Images/Landing.jpg';
 import foodheat from '../../../public/Images/foodheat.jpg';
 import muslim from '../../../public/Images/muslim.png';
+import cutopiashop from '../../../public/Images/cutopiashop.png';
 
 const projects = [
     {
@@ -84,11 +85,19 @@ const projects = [
     },
     {
         id: 9,
+        title: 'cutopia',
+        type: 'Cutopia Shop ',
+        tech: ['Next.js', 'Bootstrap', 'Supabase', 'firebase', 'SEO', 'Dashboard', 'role', 'hook jwt'],
+        imageUrl: cutopiashop,
+        link: 'https://cutopia.shop/',
+    },
+    {
+        id: 10,
         title: 'Muslim',
         type: 'نسك المسلم',
         tech: ['Next.js', 'Bootstrap', 'API Integration', 'Card Layout'],
         imageUrl: muslim,
-        link: 'https://muslim-rb.vercel.app/', // عدل باللينك الحقيقي لموقعك
+        link: 'https://muslim-rb.vercel.app/',
     },
 
 ];
@@ -96,53 +105,84 @@ const projects = [
 const ProjectsGrid = () => {
     return (
         <div className="container-fluid min-vh-100 d-flex co-fluid p-2">
-            <div className="container main-project d-flex justify-content-center align-items-center flex-column">
+            <div className=" container-xxl main-project d-flex justify-content-center align-items-center flex-column">
                 <h1 className="p-3 mb-5 fw-bold display-3 text-white text-center">My Projects</h1>
                 <Row>
                     {projects.slice().reverse().map((project) => (
-                        <Col md={4} className="mb-4" key={project.id}>
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-decoration-none"
+                        <Col md={4} className="mb-4 d-flex" key={project.id}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.4 }}
+                                className="card border-0 shadow-lg rounded-4 overflow-hidden h-100"
                             >
-                                <motion.div
-                                    className="card project-card border"
-                                    initial={{ opacity: 0, y: 80 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 0.2 }}
-                                    whileHover={{ scale: 1.02, rotate: 1 }}
-                                    whileTap={{ scale: 0.98 }}
+                                {/* الصورة مع Overlay واللينك */}
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-decoration-none"
                                 >
-                                    <div >
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.4 }}
+                                        className="position-relative"
+                                        style={{ overflow: "hidden" }}
+                                    >
                                         <Image
                                             src={project.imageUrl}
                                             alt={project.title}
                                             width={500}
                                             height={300}
-                                            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                                            className="w-100"
+                                            style={{ objectFit: "cover", height: "220px", transition: "transform 0.4s ease" }}
                                         />
-                                    </div>
 
-                                    <h5 className="card-title fw-bold fs-3 text-center pt-3">{project.type}</h5>
+                                        {/* Overlay */}
+                                        <div
+                                            className="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
+                                            style={{
+                                                background: "rgba(0,0,0,0.55)",
+                                                color: "#fff",
+                                                opacity: 0,
+                                                transition: "opacity 0.3s ease",
+                                                fontSize: "1.2rem",
+                                                fontWeight: "600",
+                                            }}
+                                        >
+                                            Go to Project
+                                        </div>
+                                    </motion.div>
+                                </a>
 
-                                    <div className="tech-stack text-center  mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                {/* محتوى الكارت */}
+                                <div className="card-body text-center p-4">
+                                    <h5 className="fw-bold mb-3">{project.type}</h5>
+
+                                    {/* التكنولوجيات */}
+                                    <div className="d-flex flex-wrap justify-content-center gap-2">
                                         {project.tech.map((item, index) => (
-                                            <p key={index} className="tech-pill fs-6  fw-bold p-1  rounded">{item}</p>
+                                            <span
+                                                key={index}
+                                                className="px-3 py-1 rounded-pill"
+                                                style={{
+                                                    background: "#f1f3f5",
+                                                    fontSize: "0.85rem",
+                                                    fontWeight: "500",
+                                                }}
+                                            >
+                                                {item}
+                                            </span>
                                         ))}
                                     </div>
-
-                                    <div className="overlay-text d-flex justify-content-center align-items-center">
-                                        Go to project
-                                    </div>
-                                </motion.div>
-
-                            </a>
+                                </div>
+                            </motion.div>
                         </Col>
                     ))}
                 </Row>
+
+
             </div>
         </div>
     );
