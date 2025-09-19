@@ -23,7 +23,7 @@ const Skills = () => {
     return (
         <div className='container-fluid main-skils min-vh-100 d-flex'>
             <div className="container d-flex justify-content-center align-items-center flex-column py-5">
-                <h2 className="text-center title-skils mb-4 display-4 fw-bold">My Skills</h2>
+                <h4 className="text-center title-skils mb-4 display-4 fw-bold">My Skills</h4>
                 <div className="row justify-content-center">
                     {skills.map((skill, index) => (
                         <motion.div

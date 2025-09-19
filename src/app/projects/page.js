@@ -115,7 +115,7 @@ const ProjectsGrid = () => {
     return (
         <div className="container-fluid min-vh-100 d-flex co-fluid p-2">
             <div className=" container-xxl main-project d-flex justify-content-center align-items-center flex-column">
-                <h1 className="p-3 mb-5 fw-bold display-3 text-white text-center">My Projects</h1>
+                <h1 className="p-3 mb-5 fw-bold display-4 text-white text-center">My Projects</h1>
                 <Row>
                     {projects.slice().reverse().map((project) => (
                         <Col md={4} className="mb-4 d-flex " key={project.id}>
