@@ -118,13 +118,13 @@ const ProjectsGrid = () => {
                 <h1 className="p-3 mb-5 fw-bold display-3 text-white text-center">My Projects</h1>
                 <Row>
                     {projects.slice().reverse().map((project) => (
-                        <Col md={4} className="mb-4 d-flex" key={project.id}>
+                        <Col md={4} className="mb-4 d-flex " key={project.id}>
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.1 }}
                                 transition={{ duration: 0.4 }}
-                                className=" border-0 shadow-lg rounded-4 overflow-hidden h-100"
+                                className=" border-0 shadow-lg rounded-4 card  overflow-hidden h-100"
                             >
                                 {/* الصورة مع Overlay واللينك */}
                                 <a
@@ -146,8 +146,8 @@ const ProjectsGrid = () => {
                                             height={300}
                                             className="w-100 "
                                             style={{
-                                                objectFit: "contain",
-                                                height: "220px",
+                                                objectFit: "cover",
+                                                height: "250px",
                                             }}
                                         />
 
