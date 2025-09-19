@@ -16,6 +16,7 @@ import landing from '../../../public/Images/Landing.jpg';
 import foodheat from '../../../public/Images/foodheat.jpg';
 import muslim from '../../../public/Images/muslim.png';
 import cutopiashop from '../../../public/Images/cutopiashop.png';
+import saasedu from '../../../public/Images/saas-edu.png';
 
 const projects = [
     {
@@ -85,6 +86,14 @@ const projects = [
     },
     {
         id: 9,
+        title: 'Saas',
+        type: 'SaaS Edu',
+        tech: ['Next.js', 'Bootstrap', 'Supabase', 'Dashboard', 'role', 'hook jwt'],
+        imageUrl: saasedu,
+        link: 'https://saas-edu.vercel.app/',
+    },
+    {
+        id: 10,
         title: 'cutopia',
         type: 'Cutopia Shop ',
         tech: ['Next.js', 'Bootstrap', 'Supabase', 'firebase', 'SEO', 'Dashboard', 'role', 'hook jwt'],
@@ -92,7 +101,7 @@ const projects = [
         link: 'https://cutopia.shop/',
     },
     {
-        id: 10,
+        id: 11,
         title: 'Muslim',
         type: 'نسك المسلم',
         tech: ['Next.js', 'Bootstrap', 'API Integration', 'Card Layout'],
@@ -113,9 +122,9 @@ const ProjectsGrid = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, amount: 0.3 }}
+                                viewport={{ once: true, amount: 0.1 }}
                                 transition={{ duration: 0.4 }}
-                                className="card border-0 shadow-lg rounded-4 overflow-hidden h-100"
+                                className=" border-0 shadow-lg rounded-4 overflow-hidden h-100"
                             >
                                 {/* الصورة مع Overlay واللينك */}
                                 <a
@@ -125,10 +134,10 @@ const ProjectsGrid = () => {
                                     className="text-decoration-none"
                                 >
                                     <motion.div
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ duration: 0.4 }}
                                         className="position-relative"
                                         style={{ overflow: "hidden" }}
+                                        whileHover={{ scale: 1.1 }} // ✅ الزووم هنا
+                                        transition={{ duration: 0.6, ease: "easeOut" }}
                                     >
                                         <Image
                                             src={project.imageUrl}
@@ -136,29 +145,34 @@ const ProjectsGrid = () => {
                                             width={500}
                                             height={300}
                                             className="w-100"
-                                            style={{ objectFit: "cover", height: "220px", transition: "transform 0.4s ease" }}
+                                            style={{
+                                                objectFit: "cover",
+                                                height: "220px",
+                                            }}
                                         />
 
                                         {/* Overlay */}
-                                        <div
+                                        <motion.div
                                             className="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
                                             style={{
                                                 background: "rgba(0,0,0,0.55)",
                                                 color: "#fff",
-                                                opacity: 0,
-                                                transition: "opacity 0.3s ease",
                                                 fontSize: "1.2rem",
                                                 fontWeight: "600",
                                             }}
+                                            initial={{ opacity: 0 }}
+                                            whileHover={{ opacity: 1 }} // ✅ يظهر تدريجي مع الزووم
+                                            transition={{ duration: 0.4 }}
                                         >
                                             Go to Project
-                                        </div>
+                                        </motion.div>
                                     </motion.div>
+
                                 </a>
 
                                 {/* محتوى الكارت */}
                                 <div className="card-body text-center p-4">
-                                    <h5 className="fw-bold mb-3">{project.type}</h5>
+                                    <h3 className=" fw-bold mb-3 text-white">{project.type}</h3>
 
                                     {/* التكنولوجيات */}
                                     <div className="d-flex flex-wrap justify-content-center gap-2">
