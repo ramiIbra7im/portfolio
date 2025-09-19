@@ -144,9 +144,9 @@ const ProjectsGrid = () => {
                                             alt={project.title}
                                             width={500}
                                             height={300}
-                                            className="w-100"
+                                            className="w-100 "
                                             style={{
-                                                objectFit: "cover",
+                                                objectFit: "contain",
                                                 height: "220px",
                                             }}
                                         />
