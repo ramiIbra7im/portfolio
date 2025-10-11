@@ -1,0 +1,188 @@
+/* Navbar.module.css */
+.navbar {
+    background: transparent;
+    backdrop-filter: blur(0px);
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+}
+
+.navbarScrolled {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 0.5rem 0;
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff !important;
+    text-decoration: none;
+    z-index: 1002;
+}
+
+.dot {
+    color: #ff6b6b;
+}
+
+.navLink {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem !important;
+    margin: 0 0.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.navLink:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.navLink.active {
+    color: #fff !important;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+}
+
+/* Custom Toggler */
+.navbarToggler {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    z-index: 1002;
+}
+
+.customToggler {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.customToggler span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.customToggler span:nth-child(1) {
+    top: 0px;
+}
+
+.customToggler span:nth-child(2) {
+    top: 10px;
+}
+
+.customToggler span:nth-child(3) {
+    top: 20px;
+}
+
+.customToggler.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.customToggler.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.customToggler.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    .navbarCollapse {
+        display: flex !important;
+    }
+
+    .navbarToggler {
+        display: none !important;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 991.98px) {
+    .navbarCollapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        padding: 80px 1.5rem 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    .navbarCollapse.show {
+        right: 0;
+    }
+
+    .navbarNav {
+        flex-direction: column;
+    }
+
+    .navItem {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .navLink {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 0;
+        padding: 1rem !important;
+        background: rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+
+    /* Close Button */
+    .closeButton {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1002;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobileOverlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* إصلاح الهزة - منع التمرير الأفقي */
+body.menuOpen {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}

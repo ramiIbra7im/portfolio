@@ -83,3 +83,21 @@ html {
   --color3: #ffff;
   --color4: #00AFF2;
 }
+
+
+/* app/globals.css */
+.home-page {
+  scroll-behavior: smooth;
+}
+
+/* إزالة المسافات الزائدة بين السيكشنز */
+.home-page>* {
+  margin: 0;
+  padding: 0;
+}
+
+/* تأكد إن الـ sections بتكون متلاصقة */
+.home-page>div {
+  border: none;
+  outline: none;
+}
