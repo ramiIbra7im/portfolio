@@ -166,3 +166,21 @@ a.secondary {
     filter: invert();
   }
 }
+
+.background {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #764ba2 20%, #667eea 25%, #764ba2 70%, #667eea 100%);
+  position: relative;
+  /* ممكن تغيرها لتكرار مختلف */
+}
+
+
+/* 
+#0f172a,
+#0f172a 25%,
+#1e293b 25%,
+#1e293b 50%
+);
+*/

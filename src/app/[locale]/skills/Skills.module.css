@@ -1,6 +1,7 @@
 /* Skills.module.css */
 .mainSkills {
-    background: linear-gradient(-130deg, #764ba2 0%, #667eea 100%);
+    /* background: linear-gradient(-130deg, #764ba2 0%, #667eea 100%); */
+    background: linear-gradient(90deg, #764ba2 0%, #667eea 120%);
     padding: 4rem 0;
 }
 

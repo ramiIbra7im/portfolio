@@ -1,6 +1,7 @@
 /* Process.module.css */
 .processSection {
-    background: linear-gradient(-135deg, #764ba2 0%, #667eea 100%);
+    /* background: linear-gradient(-135deg, #764ba2 0%, #667eea 100%); */
+    background: linear-gradient(90deg, #764ba2 0%, #667eea 120%);
     padding: 5rem 0;
 }
 

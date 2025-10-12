@@ -87,11 +87,10 @@ export default function Hero() {
 
     return (
         <div className={styles.heroSection} id="home">
-            {/* Particles Background */}
             <div className={styles.particleContainer}>
                 <SimpleParticles />
             </div>
-
+ 
             {/* Main Content */}
             <section className={styles.mainContent}>
                 {/* Text Section */}
@@ -163,7 +162,7 @@ export default function Hero() {
                                 fill
                                 className={styles.heroImage}
                                 priority
-                                // sizes="(max-width: 768px) 280px, (max-width: 1200px) 320px, 360px"
+                            // sizes="(max-width: 768px) 280px, (max-width: 1200px) 320px, 360px"
                             />
                         </div>
                     </div>

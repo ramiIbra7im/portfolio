@@ -57,7 +57,7 @@ const Services = () => {
     };
 
     return (
-        <div className={`container-fluid ${styles.servicesSection}`} id="services">
+        <div  className={`container-fluid ${styles.servicesSection}`} id="services">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

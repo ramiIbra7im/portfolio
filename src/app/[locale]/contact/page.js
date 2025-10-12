@@ -1,4 +1,3 @@
-// components/Contact/Contact.js
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -59,11 +58,10 @@ const Contact = () => {
   ];
 
   return (
-    <div className={`container-fluid ${styles.contactSection} d-flex align-items-center`} id="contact">
-
+    <section id="contact" className={`${styles.contactSection} py-5`}>
       {showAlert && (
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           className={`alert alert-success ${styles.alert} text-center fw-bold`}
         >
@@ -80,8 +78,8 @@ const Contact = () => {
           {t('contact.title')}
         </motion.h2>
 
-        <div className="row g-4">
-          {/* معلومات الاتصال - 6 بطاقات في صفين */}
+        <div className="row g-4 align-items-stretch">
+          {/* معلومات الاتصال */}
           <div className="col-lg-6">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -91,7 +89,7 @@ const Contact = () => {
               {contactInfo.map((item, index) => {
                 const IconComponent = item.icon;
                 return (
-                  <div key={index} className="col-md-6">
+                  <div key={index} className="col-sm-6">
                     <motion.a
                       href={item.href}
                       target="_blank"
@@ -100,10 +98,10 @@ const Contact = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <div className="card-body text-center p-3">
-                        <IconComponent className={`mb-2 ${styles.contactIcon}`} />
-                        <h6 className="card-title mb-1 fw-bold">{item.label}</h6>
-                        <p className="card-text small mb-0">{item.value}</p>
+                      <div className="card-body text-center p-4">
+                        <IconComponent className={`mb-3 ${styles.contactIcon}`} />
+                        <h6 className="fw-bold mb-1">{item.label}</h6>
+                        <p className="small mb-0">{item.value}</p>
                       </div>
                     </motion.a>
                   </div>
@@ -118,9 +116,9 @@ const Contact = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               onSubmit={handleSubmit}
-              className={`card ${styles.contactCard} border-0`}
+              className={`card border-0 h-100 ${styles.contactCard}`}
             >
-              <div className="card-body p-4">
+              <div className="card-body p-4 p-md-5">
                 <div className="mb-3">
                   <input
                     type="text"
@@ -145,7 +143,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-4">
                   <textarea
                     name="message"
                     className={`form-control ${styles.formControl}`}
@@ -156,13 +154,14 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <div className='text-center'>
+
+                <div className="text-center">
                   <motion.button
                     type="submit"
-                    className={`btn text-white fw-bold p-3 px-4 ${styles.submitBtn}`}
+                    className={`btn text-white fw-bold px-5 py-3 ${styles.submitBtn}`}
                     disabled={isLoading}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
                   >
                     {isLoading ? (
                       <>
@@ -179,7 +178,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

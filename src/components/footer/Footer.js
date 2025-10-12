@@ -7,6 +7,7 @@ import styles from './Footer.module.css';
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentYear] = useState(new Date().getFullYear());
+  const [bubbles, setBubbles] = useState([]); // ← حفظ البيانات العشوائية هنا
 
   const toggleVisibility = () => {
     setIsVisible(window.pageYOffset > 300);
@@ -21,7 +22,18 @@ const Footer = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  // Social links data
+  // توليد الفقاعات مرة واحدة فقط بعد تحميل الصفحة
+  useEffect(() => {
+    const generatedBubbles = Array.from({ length: 8 }).map(() => ({
+      width: Math.random() * 80 + 30,
+      height: Math.random() * 80 + 30,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      duration: Math.random() * 8 + 8,
+    }));
+    setBubbles(generatedBubbles);
+  }, []);
+
   const socialLinks = [
     {
       icon: FaWhatsapp,
@@ -76,22 +88,19 @@ const Footer = () => {
       <footer className={`${styles.footer} text-white py-5 position-relative`}>
         {/* Animated Background Elements */}
         <div className={styles.backgroundElements}>
-          {[...Array(8)].map((_, i) => (
+          {bubbles.map((bubble, i) => (
             <motion.div
               key={i}
               className={`${styles.bubble} ${styles.floating}`}
               style={{
-                width: `${Math.random() * 80 + 30}px`,
-                height: `${Math.random() * 80 + 30}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
+                width: `${bubble.width}px`,
+                height: `${bubble.height}px`,
+                top: `${bubble.top}%`,
+                left: `${bubble.left}%`,
               }}
-              animate={{
-                y: [0, -15, 0],
-                x: [0, 8, 0],
-              }}
+              animate={{ y: [0, -15, 0], x: [0, 8, 0] }}
               transition={{
-                duration: Math.random() * 8 + 8,
+                duration: bubble.duration,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -101,7 +110,7 @@ const Footer = () => {
 
         <div className="container">
           <div className="row align-items-center">
-            {/* Copyright Section */}
+            {/* Copyright */}
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <motion.p
                 className={`${styles.copyright} mb-2 fw-bold`}
@@ -109,10 +118,8 @@ const Footer = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                CopyRight © {currentYear} {' '}
-                <span className={styles.gradientText}>
-                  Ramy Ibrahim CEO
-                </span>
+                CopyRight © {currentYear}{' '}
+                <span className={styles.gradientText}>Ramy Ibrahim CEO</span>
               </motion.p>
               <motion.p
                 className={styles.tagline}
@@ -132,7 +139,7 @@ const Footer = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
