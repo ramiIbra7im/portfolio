@@ -127,6 +127,7 @@ function Navbar() {
           ))}
         </ul>
 
+        {/* BY Ramy Ibrahim */}
         <div className={styles.mobileFooter}>
           <p className={styles.credit}>BY Ramy Ibrahim</p>
         </div>
