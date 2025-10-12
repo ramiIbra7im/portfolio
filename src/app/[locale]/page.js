@@ -1,11 +1,11 @@
 'use client';
 import Hero from "../../components/herosection/hero";
-import Skills from "../[locale]/skills/page";
-import Services from "../[locale]/services/page";
-import Process from "../[locale]/Process/page";
+import Skills from "./skills/page";
+import Services from "./services/page";
+import Process from "./Process/page";
 import Stats from "./statistics/page";
-import ProjectsGrid from "../[locale]/projects/page";
-import Contact from "../[locale]/contact/page";
+import ProjectsGrid from "./projects/page";
+import Contact from "./contact/page";
 import { use } from "react";
 import styles from "../page.module.css"; // ← استيراد CSS module
 
