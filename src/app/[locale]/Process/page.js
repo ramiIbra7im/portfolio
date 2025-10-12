@@ -61,7 +61,7 @@ const Process = () => {
                                 className="col-md-6 col-lg-3"
                             >
                                 <motion.div
-                                    className={styles.processStep}
+                                    className={`${styles.processStep} h-100`}
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     <div className={styles.stepNumber}>{step.number}</div>

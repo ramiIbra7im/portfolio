@@ -3,7 +3,7 @@ import Hero from "../../components/herosection/hero";
 import Skills from "../[locale]/skills/page";
 import Services from "../[locale]/services/page";
 import Process from "../[locale]/Process/page";
-import Stats from "../statistics/page";
+import Stats from "./statistics/page";
 import ProjectsGrid from "../[locale]/projects/page";
 import Contact from "../[locale]/contact/page";
 import { use } from "react";

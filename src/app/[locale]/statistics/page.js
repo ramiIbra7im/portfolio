@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { getTranslations } from '../../i18n/config';
+import { getTranslations } from '../../../i18n/config';
 import styles from './Stats.module.css';
 
 const AnimatedCounter = ({ value, suffix = '' }) => {
