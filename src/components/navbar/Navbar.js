@@ -91,7 +91,7 @@ function Navbar() {
                   <Link
                     href={`/${currentLocale}${path}`}
                     className={`nav-link ${styles.navLink} ${pathname === `/${currentLocale}${path}` ||
-                        (path === '/' && pathname === `/${currentLocale}`) ? styles.active : ''
+                      (path === '/' && pathname === `/${currentLocale}`) ? styles.active : ''
                       }`}
                     onClick={closeMobileMenu}
                   >
@@ -127,7 +127,6 @@ function Navbar() {
           ))}
         </ul>
 
-        {/* BY Ramy Ibrahim */}
         <div className={styles.mobileFooter}>
           <p className={styles.credit}>BY Ramy Ibrahim</p>
         </div>
