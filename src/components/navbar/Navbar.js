@@ -105,6 +105,14 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.show : ''}`}>
+        {/* Close Button بدون علامة X */}
+        {/* <button
+          className={styles.closeButton}
+          onClick={closeMobileMenu}
+          aria-label="Close menu"
+        >
+        </button> */}
+
         {/* Navigation Links */}
         <ul className="navbar-nav">
           {links.map(({ path, label }) => (

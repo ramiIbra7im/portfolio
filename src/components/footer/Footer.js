@@ -127,7 +127,7 @@ const Footer = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Full Stack Developer | Creating Amazing Web Experiences
+                front End Developer | Creating Amazing Web Experiences
               </motion.p>
             </div>
 
