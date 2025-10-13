@@ -50,11 +50,11 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: FaPhone, label: t('contact.info.phone'), value: t('contact.value.phone'), href: 'tel:+201551212431' },
-    { icon: FaEnvelope, label: t('contact.info.email'), value: t('contact.value.email'), href: 'mailto:ramy@example.com' },
+    { icon: FaEnvelope, label: t('contact.info.email'), value: t('contact.value.email'), href: 'mailto:ramyibrahim432@gmail.com' },
     { icon: FaWhatsapp, label: t('contact.info.whatsapp'), value: t('contact.value.whatsapp'), href: 'https://wa.me/201551212431' },
     { icon: FaFacebook, label: t('contact.info.facebook'), value: t('contact.value.facebook'), href: 'https://facebook.com/Ramiibra7im' },
-    { icon: FaLinkedin, label: t('contact.info.linkedin'), value: t('contact.value.linkedin'), href: 'https://linkedin.com/in/yourusername' },
-    { icon: FaGithub, label: t('contact.info.github'), value: t('contact.value.github'), href: 'https://github.com/yourusername' }
+    { icon: FaLinkedin, label: t('contact.info.linkedin'), value: t('contact.value.linkedin'), href: 'https://linkedin.com/in/rami-ibrahim29' },
+    { icon: FaGithub, label: t('contact.info.github'), value: t('contact.value.github'), href: 'https://github.com/Ramiibra7im' }
   ];
 
   return (

@@ -47,17 +47,17 @@ const Stats = () => {
 
     const stats = [
         {
-            number: 50,
+            number: 6,
             label: t('stats.projects'),
             suffix: '+'
         },
         {
-            number: 30,
+            number: 10,
             label: t('stats.clients'),
             suffix: '+'
         },
         {
-            number: 3,
+            number: 2,
             label: t('stats.experience'),
             suffix: '+'
         },

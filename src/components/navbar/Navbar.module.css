@@ -17,7 +17,7 @@
     height: 70px;
 }
 
-/* Mobile Menu - بيكون خارج الصفحة بالdefault */
+/* Mobile Menu */
 .mobileMenu {
     position: fixed;
     top: 0;
@@ -63,7 +63,6 @@
     }
 }
 
-/* باقي الـ CSS يفضل كما هو */
 .brand {
     font-size: 1.8rem;
     font-weight: 800;
@@ -155,15 +154,17 @@
         background: linear-gradient(45deg, #ff6b6b, #ee5a24);
     }
 
-    /* Close Button */
+    /* Close Button - بدون علامة X */
     .closeButton {
         position: absolute;
         top: 1rem;
         right: 1rem;
-        background: none;
+        background: rgba(255, 255, 255, 0.1);
         border: none;
-        color: #fff;
-        font-size: 2rem;
+        color: transparent;
+        /* إخفاء النص */
+        font-size: 0;
+        /* إخفاء النص */
         cursor: pointer;
         z-index: 1002;
         width: 40px;
@@ -172,11 +173,37 @@
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
+        border-radius: 50%;
+        /* أنيميشن الـ X باستخدام CSS فقط */
+        position: relative;
+    }
+
+    .closeButton::before,
+    .closeButton::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .closeButton::before {
+        transform: rotate(45deg);
+    }
+
+    .closeButton::after {
+        transform: rotate(-45deg);
     }
 
     .closeButton:hover {
-        color: #ff6b6b;
-        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1) rotate(90deg);
+    }
+
+    .closeButton:hover::before,
+    .closeButton:hover::after {
+        background: #ff6b6b;
     }
 
     /* Mobile Footer */

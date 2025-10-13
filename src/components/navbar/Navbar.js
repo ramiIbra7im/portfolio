@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // false بالdefault
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { t, currentLocale } = useI18n();
 
@@ -24,7 +24,6 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    // التحكم في scroll عند فتح القائمة
     if (isMobileMenuOpen) {
       document.body.classList.add('menuOpen');
     } else {
@@ -104,13 +103,8 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu - بيكون hidden بالdefault */}
+      {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.show : ''}`}>
-        {/* Close Button */}
-        <button className={styles.closeButton} onClick={closeMobileMenu}>
-          ×
-        </button>
-
         {/* Navigation Links */}
         <ul className="navbar-nav">
           {links.map(({ path, label }) => (

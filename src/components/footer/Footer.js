@@ -119,7 +119,7 @@ const Footer = () => {
                 transition={{ duration: 0.6 }}
               >
                 CopyRight © {currentYear}{' '}
-                <span className={styles.gradientText}>Ramy Ibrahim CEO</span>
+                <span className={styles.gradientText}>Ramy Ibrahim CEO RB </span>
               </motion.p>
               <motion.p
                 className={styles.tagline}
@@ -166,7 +166,7 @@ const Footer = () => {
           >
             <div className="col-12 text-center">
               <p className={`${styles.builtWith} small mb-0`}>
-                Built with ❤️ using Next.js & React | Always learning, always coding
+                Built with ❤️ using Next.js or React | Always learning, always coding
               </p>
             </div>
           </motion.div>

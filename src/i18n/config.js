@@ -16,7 +16,7 @@ export const translations = {
         'hero.title': 'أنا رامي إبراهيم',
         'hero.subtitle': 'مطور واجهات أمامية',
         'hero.cta.work': 'شاهد أعمالي',
-        'hero.cta.contact': 'اتصل بي',
+        'hero.cta.contact': 'اتصل بي 01551212431',
         'hero.scroll': 'انتقل للأسفل',
         'hero.changing.nextjs': 'مطور Next.js',
         'hero.changing.designer': 'مصمم واجهات',
@@ -105,7 +105,7 @@ export const translations = {
         'contact.message': 'الرسالة',
         'contact.send': 'إرسال الرسالة',
         'contact.sending': 'جاري الإرسال...',
-        'contact.success': 'تم إرسال الرسالة بنجاح! 🎉',
+        'contact.success': 'تم إرسال الرسالة بنجاح! ',
         'contact.error': 'فشل في الإرسال. حاول مرة أخرى.',
 
         // Contact Info
@@ -117,9 +117,9 @@ export const translations = {
         'contact.info.github': 'جيت هاب',
 
         'contact.value.phone': '+20 155 121 2431',
-        'contact.value.email': 'ramy@example.com',
+        'contact.value.email': 'ramyibrahim432@gmail.com',
         'contact.value.whatsapp': '+20 155 121 2431',
-        'contact.value.facebook': 'رامي إبراهيم',
+        'contact.value.facebook': 'Ramy Ibrahim',
         'contact.value.linkedin': 'رامي إبراهيم',
         'contact.value.github': 'ramy-ibrahim',
     },
@@ -136,14 +136,14 @@ export const translations = {
         // Hero Section
         'hero.title': "I'm Ramy Ibrahim",
         'hero.subtitle': 'Frontend Developer',
-        'hero.cta.work': 'View My Work',
-        'hero.cta.contact': 'Contact Me',
+        'hero.cta.work': 'View  Work',
+        'hero.cta.contact': 'Contact Me 01551212431',
         'hero.scroll': 'Scroll Down',
         'hero.changing.nextjs': 'Next.js Developer',
         'hero.changing.designer': 'UI Designer',
 
         // Skills Section
-        'skills.title': 'My Skills',
+        'skills.title': ' Skills',
         'skills.html': 'HTML',
         'skills.css': 'CSS',
         'skills.javascript': 'JavaScript',
@@ -155,7 +155,7 @@ export const translations = {
         'skills.framer': 'Framer Motion',
 
         // Services Section
-        'services.title': 'My Services',
+        'services.title': ' Services',
         'services.webdev.title': 'Web Development',
         'services.webdev.desc': 'Building responsive and modern websites using latest technologies like React, Next.js, and modern CSS frameworks.',
         'services.design.title': 'UI/UX Design',
@@ -166,7 +166,7 @@ export const translations = {
         'services.performance.desc': 'Optimizing websites for speed and performance to provide the best user experience and SEO benefits.',
 
         // Process Section
-        'process.title': 'My Process',
+        'process.title': ' Process',
         'process.step1.number': '01',
         'process.step1.title': 'Analysis & Planning',
         'process.step1.desc': 'I understand your requirements and goals, and create a detailed work plan to ensure project success',
@@ -181,7 +181,7 @@ export const translations = {
         'process.step4.desc': 'I deliver the project with full support and ensure everything works perfectly',
 
         // Stats Section
-        'stats.title': 'My Achievements',
+        'stats.title': ' Achievements',
         'stats.projects': 'Completed Projects',
         'stats.clients': 'Happy Clients',
         'stats.experience': 'Years Experience',
@@ -189,7 +189,7 @@ export const translations = {
         'stats.description': 'I take pride in every project and work meticulously to achieve the best',
 
         // Projects Section
-        'projects.title': 'My Projects',
+        'projects.title': ' Projects',
         'projects.view': 'View Project',
         'projects.showing': 'Showing',
         'projects.of': 'of',
@@ -213,7 +213,7 @@ export const translations = {
         'about.description2': 'With experience in React and Next.js, I build complex and flexible web applications that provide exceptional user experiences. I believe in continuous learning and staying updated with the latest trends in web development to deliver cutting-edge solutions.',
 
         // Projects Section
-        'projects.title': 'My Projects',
+        'projects.title': ' Projects',
         'projects.view': 'View Project',
         'projects.showing': 'Showing',
         'projects.of': 'of',
@@ -226,7 +226,7 @@ export const translations = {
         'contact.message': 'Your Message',
         'contact.send': 'Send Message',
         'contact.sending': 'Sending...',
-        'contact.success': 'Message sent successfully! 🎉',
+        'contact.success': 'Message sent successfully!',
         'contact.error': 'Failed to send message. Please try again.',
 
         // Contact Info
@@ -238,7 +238,7 @@ export const translations = {
         'contact.info.github': 'GitHub',
 
         'contact.value.phone': '+20 155 121 2431',
-        'contact.value.email': 'ramy@example.com',
+        'contact.value.email': 'ramyibrahim432@gmail.com',
         'contact.value.whatsapp': '+20 155 121 2431',
         'contact.value.facebook': 'Ramy Ibrahim',
         'contact.value.linkedin': 'Ramy Ibrahim',
