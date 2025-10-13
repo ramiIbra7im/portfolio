@@ -60,6 +60,7 @@
 
     .navbarToggler {
         display: none !important;
+        z-index: 1002;
     }
 }
 
