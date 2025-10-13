@@ -26,8 +26,10 @@ function Navbar() {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.classList.add('menuOpen');
+      document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.classList.remove('menuOpen');
+      document.documentElement.style.overflow = 'unset';
     }
   }, [isMobileMenuOpen]);
 
@@ -51,7 +53,7 @@ function Navbar() {
   return (
     <>
       <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbar} ${isScrolled ? styles.navbarScrolled : ''}`}>
-        <div className="container z-3">
+        <div className="container position-relative">
           {/* Brand */}
           <Link className={`navbar-brand ${styles.brand}`} href={`/${currentLocale}`} onClick={closeMobileMenu}>
             <Image src="/Images/logo.png" alt="Logo" width={40} height={40} className="rounded-5" />
@@ -63,7 +65,7 @@ function Navbar() {
           </div>
 
           {/* Mobile Toggler */}
-          <div className="d-flex align-items-center">
+          <div className={`d-flex align-items-center ${styles.togglerContainer}`}>
             {/* Language Switcher في الموبايل */}
             <div className="d-lg-none me-3">
               <LanguageSwitcher />
@@ -73,6 +75,7 @@ function Navbar() {
               className={`navbar-toggler ${styles.navbarToggler}`}
               type="button"
               onClick={toggleMobileMenu}
+              aria-label="Toggle navigation"
             >
               <div className={`${styles.customToggler} ${isMobileMenuOpen ? styles.active : ''}`}>
                 <span></span>
