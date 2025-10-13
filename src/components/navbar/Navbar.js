@@ -51,7 +51,7 @@ function Navbar() {
   return (
     <>
       <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbar} ${isScrolled ? styles.navbarScrolled : ''}`}>
-        <div className="container">
+        <div className="container z-3">
           {/* Brand */}
           <Link className={`navbar-brand ${styles.brand}`} href={`/${currentLocale}`} onClick={closeMobileMenu}>
             <Image src="/Images/logo.png" alt="Logo" width={40} height={40} className="rounded-5" />
@@ -106,12 +106,7 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.show : ''}`}>
         {/* Close Button بدون علامة X */}
-        {/* <button 
-          className={styles.closeButton} 
-          onClick={closeMobileMenu}
-          aria-label="Close menu"
-        >
-        </button> */}
+
 
         {/* Navigation Links */}
         <ul className="navbar-nav">

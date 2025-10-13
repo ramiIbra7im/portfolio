@@ -73,7 +73,7 @@ export default function RootLayout({ children, params }) {
   const { locale } = use(params);
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <html lang={locale} dir={locale === 'en' ? 'rtl' : 'ltr'}>
       <body>
         <I18nProvider>
           <Navbar />
