@@ -1,9 +1,13 @@
+import Protection from "@/components/Protection";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
     return (
-        <html>
-            <body>{children}</body>
+        <html lang="en" dir="rtl">
+            <body >
+                {/* <Protection /> */}
+                    {children}
+            </body>
         </html>
     );
 }

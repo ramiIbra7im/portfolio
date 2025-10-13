@@ -1,11 +1,8 @@
 // app/[locale]/layout.js
 import "../globals.css";
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { I18nProvider } from '../../i18n/context';
-import { use } from "react";
-import BootstrapClient from "@/components/BootstrapClient";
+import ClientLayout from "./ClientLayout";
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
 
@@ -28,7 +25,7 @@ export async function generateMetadata({ params }) {
     description: currentMeta.description,
     keywords: ["Frontend Developer", "React", "Next.js", "JavaScript", "Web Development", "Portfolio"],
     icons: {
-      icon: '/favicon.ico', // غيرت لـ favicon.ico
+      icon: '/favicon.ico',
     },
     openGraph: {
       title: currentMeta.title,
@@ -39,7 +36,7 @@ export async function generateMetadata({ params }) {
       siteName: "Ramy Ibrahim Portfolio",
       images: [
         {
-          url: "/Images/logo.png", // تأكد إن الصورة موجودة في public/
+          url: "/Images/logo.png",
           width: 1200,
           height: 630,
           alt: currentMeta.title,
@@ -51,11 +48,11 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: currentMeta.title,
       description: currentMeta.description,
-      images: ["/Images/logo.png"], // غيرت لـ logo.png بدل og-image.jpg
+      images: ["/Images/logo.png"],
     },
 
     alternates: {
-      canonical: "https://rb-ramy.vercel.app", // أزلت الـ / الأخيرة
+      canonical: "https://rb-ramy.vercel.app",
       languages: {
         'en': 'https://rb-ramy.vercel.app/en',
         'ar': 'https://rb-ramy.vercel.app/ar',
@@ -70,17 +67,14 @@ export async function generateMetadata({ params }) {
 }
 
 export default function RootLayout({ children, params }) {
-  const { locale } = use(params);
+  const { locale } = params;
 
   return (
-    <html lang={locale} dir={locale === 'en' ? 'rtl' : 'ltr'}>
-      <body>
-        <I18nProvider>
-          <Navbar />
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ClientLayout params={params}>
           {children}
-          <Footer />
-          <BootstrapClient />
-        </I18nProvider>
+        </ClientLayout>
       </body>
     </html>
   );

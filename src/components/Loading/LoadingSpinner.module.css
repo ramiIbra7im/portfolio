@@ -1,0 +1,436 @@
+/* components/LoadingSpinner.module.css */
+.loadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: white;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+}
+
+/* الخلفية المتحركة */
+.backgroundAnimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floatingOrb {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.floatingOrb:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.floatingOrb:nth-child(2) {
+    top: 60%;
+    right: 10%;
+}
+
+.floatingOrb:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+/* المحتوى الرئيسي */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* الشعار ثلاثي الأبعاد */
+.logo3d {
+    margin-bottom: 3rem;
+    perspective: 1000px;
+}
+
+.logoCube {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: cubeRotate 4s linear infinite;
+}
+
+.cubeFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.cubeFront {
+    transform: translateZ(40px);
+}
+
+.cubeBack {
+    transform: translateZ(-40px) rotateY(180deg);
+}
+
+.cubeTop {
+    transform: rotateX(90deg) translateZ(40px);
+}
+
+.cubeBottom {
+    transform: rotateX(-90deg) translateZ(40px);
+}
+
+.cubeLeft {
+    transform: rotateY(-90deg) translateZ(40px);
+}
+
+.cubeRight {
+    transform: rotateY(90deg) translateZ(40px);
+}
+
+@keyframes cubeRotate {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* Spinner متطور */
+.advancedSpinner {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 3rem;
+}
+
+.spinnerRing {
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #ff6b6b;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.spinnerCore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.spinnerOrbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: orbitRotate 3s linear infinite;
+}
+
+.orbitingDot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #4ecdc4;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(45px) rotate(0deg);
+    animation: dotOrbit 1.5s linear infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dotOrbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(45px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(45px) rotate(-360deg);
+    }
+}
+
+/* النص مع تأثيرات */
+.textContainer {
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #e3f2fd, #bbdefb);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+.titleChar {
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.titleChar:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.titleChar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.titleChar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.titleChar:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.titleChar:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.titleChar:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.titleChar:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* شريط التقدم المتطور */
+.progressSection {
+    margin-bottom: 2rem;
+}
+
+.progressInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.percentage {
+    font-weight: 600;
+    color: #4ecdc4;
+}
+
+.status {
+    opacity: 0.8;
+}
+
+.progressContainer {
+    position: relative;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.progressGlow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: glowMove 2s linear infinite;
+}
+
+@keyframes glowMove {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* رسالة تحفيزية */
+.motivational {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    font-style: italic;
+    animation: fadeInOut 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* تأثيرات responsive */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%;
+    }
+
+    .logoCube {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cubeFace {
+        font-size: 1.4rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .advancedSpinner {
+        width: 100px;
+        height: 100px;
+    }
+
+    .orbitingDot {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(35px) rotate(0deg);
+    }
+
+    .floatingOrb {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* تأثيرات دخول */
+.loadingContainer {
+    animation: containerEnter 0.5s ease-out;
+}
+
+@keyframes containerEnter {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
