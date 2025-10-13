@@ -4,12 +4,10 @@
     backdrop-filter: blur(0px);
     transition: all 0.4s ease;
     padding: 1rem 0;
-    z-index: 1100;
-    /* زيادة الـ z-index */
+    z-index: 1000;
     height: 80px;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .navbarScrolled {
@@ -31,8 +29,7 @@
     backdrop-filter: blur(25px);
     padding: 80px 1.5rem 2rem;
     transition: right 0.3s ease-in-out;
-    z-index: 1200;
-    /* أعلى من النافبار */
+    z-index: 1001;
     margin: 0;
     overflow-y: auto;
     display: flex;
@@ -63,6 +60,7 @@
 
     .navbarToggler {
         display: none !important;
+        z-index: 1002;
     }
 }
 
@@ -71,11 +69,9 @@
     font-weight: 800;
     color: #fff !important;
     text-decoration: none;
-    z-index: 1101;
-    /* أعلى من النافبار */
+    z-index: 1002;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .navLink {
@@ -103,10 +99,8 @@
     border: none !important;
     padding: 0 !important;
     background: transparent !important;
-    z-index: 1101;
-    /* أعلى من النافبار */
+    z-index: 1002;
     box-shadow: none !important;
-    position: relative;
 }
 
 .customToggler {
@@ -169,10 +163,11 @@
         background: rgba(255, 255, 255, 0.1);
         border: none;
         color: transparent;
+        /* إخفاء النص */
         font-size: 0;
+        /* إخفاء النص */
         cursor: pointer;
-        z-index: 1201;
-        /* أعلى من الموبايل مينو */
+        z-index: 1002;
         width: 40px;
         height: 40px;
         display: flex;
@@ -180,6 +175,7 @@
         justify-content: center;
         transition: all 0.3s ease;
         border-radius: 50%;
+        /* أنيميشن الـ X باستخدام CSS فقط */
         position: relative;
     }
 
@@ -236,8 +232,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1199;
-    /* أقل من الموبايل مينو وأعلى من النافبار */
+    z-index: 999;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
@@ -263,19 +258,4 @@
 [dir="rtl"] .closeButton {
     right: auto;
     left: 1rem;
-}
-
-/* تأكد من أن النافبار دائماً في المقدمة */
-@media (max-width: 991.98px) {
-    .navbar {
-        z-index: 1100 !important;
-    }
-
-    .navbarToggler {
-        z-index: 1101 !important;
-    }
-
-    .brand {
-        z-index: 1101 !important;
-    }
 }
