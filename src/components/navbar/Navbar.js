@@ -77,7 +77,7 @@ function Navbar() {
               onClick={toggleMobileMenu}
               aria-label="Toggle navigation"
             >
-              <div className={`${styles.customToggler} ${isMobileMenuOpen ? styles.active : ''}`}>
+              <div className={`${styles.customToggler} ${isMobileMenuOpen ? styles.active : ''} z-3`}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -108,7 +108,6 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.show : ''}`}>
-        {/* Close Button بدون علامة X */}
 
 
         {/* Navigation Links */}

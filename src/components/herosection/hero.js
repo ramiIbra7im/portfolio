@@ -22,7 +22,6 @@ export default function Hero() {
         ];
         setChangingTexts(texts);
 
-        console.log('Updated texts for locale:', currentLocale, texts);
     }, [t, currentLocale]); // أهم حاجة: نسمع لتغير الـ t والـ currentLocale
 
     const scrollToProjects = () => {
@@ -90,7 +89,7 @@ export default function Hero() {
             <div className={styles.particleContainer}>
                 <SimpleParticles />
             </div>
- 
+
             {/* Main Content */}
             <section className={styles.mainContent}>
                 {/* Text Section */}
