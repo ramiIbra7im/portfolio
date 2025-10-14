@@ -84,6 +84,8 @@ export const translations = {
         'projects.types.shop': 'متجر إلكتروني',
         'projects.types.api': 'تطبيق API',
         'projects.types.contracting': 'موقع مقاولات',
+        'projects.types.Dashboard': 'لوحة تحكم',
+
 
         // About Section
         'about.title': 'عنّي',
@@ -205,6 +207,7 @@ export const translations = {
         'projects.types.shop': 'E-commerce Shop',
         'projects.types.api': 'API Integration',
         'projects.types.contracting': 'Contracting Website',
+        'projects.types.Dashboard': 'Dashboard',
 
         // About Section
         'about.title': 'About Me',

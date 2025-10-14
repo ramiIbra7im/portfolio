@@ -80,7 +80,7 @@ const Skills = () => {
                                                 <IconComponent className={styles.skillIcon} />
                                             </div>
                                             <h5 className={styles.skillName}>{skill.name}</h5>
-                                            <div className={styles.skillLevel}>{skill.level}%</div>
+                                            {/* <div className={styles.skillLevel}>{skill.level}%</div> */}
                                         </div>
                                     </motion.div>
                                 </Col>

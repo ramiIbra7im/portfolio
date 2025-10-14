@@ -261,3 +261,6 @@
     right: auto;
     left: 1rem;
 }
+.brandText span {
+    color: #ff6b6b;
+}

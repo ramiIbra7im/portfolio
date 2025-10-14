@@ -56,7 +56,8 @@ function Navbar() {
         <div className="container position-relative">
           {/* Brand */}
           <Link className={`navbar-brand ${styles.brand}`} href={`/${currentLocale}`} onClick={closeMobileMenu}>
-            <Image src="/Images/logo.png" alt="Logo" width={40} height={40} className="rounded-5" />
+            {/* <Image src="/Images/logo.png" alt="Logo" width={40} height={40} className="rounded-5" /> */}
+            <span className={styles.brandText}>RB<span>.</span></span>
           </Link>
 
           {/* Language Switcher - في اليسار */}
