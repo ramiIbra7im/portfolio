@@ -40,7 +40,7 @@ export default function ProjectsGrid() {
         { id: 7, title: 'Landing Page', type: t('projects.types.landing'), tech: ['Next.js', 'Bootstrap'], imageUrl: landing, link: 'https://page-rb.vercel.app/' },
         { id: 8, title: 'Food Store', type: t('projects.types.ecommerce'), tech: ['Next.js', 'Bootstrap'], imageUrl: foodheat, link: 'https://foodheat.vercel.app/' },
         { id: 9, title: 'Saas', type: t('projects.types.saas'), tech: ['Next.js', 'Supabase'], imageUrl: saasedu, link: 'https://saas-edu.vercel.app/' },
-        { id: 10, title: 'Cutopia', type: t('projects.types.shop'), tech: ['Next.js', 'Bootstrap', 'SEO'], imageUrl: cutopiashop, link: 'https://cutopia.shop/' },
+        { id: 10, title: 'Cutopia', type: t('projects.types.shop'), tech: ['Next.js', 'Bootstrap', 'SEO'], imageUrl: cutopiashop, link: 'https://cutopia-rb.vercel.app/' },
         { id: 11, title: 'Muslim', type: t('projects.types.api'), tech: ['Next.js', 'API Integration'], imageUrl: muslim, link: 'https://muslim-rb.vercel.app/' },
         { id: 12, title: 'El Zaeem', type: t('projects.types.contracting'), tech: ['Next.js', 'Bootstrap'], imageUrl: elzaeem, link: 'https://mqawalat.vercel.app/' },
         { id: 13, title: 'Dashboard', type: t('projects.types.Dashboard'), tech: ['Next.js', 'Bootstrap', 'recharts'], imageUrl: dashboard, link: 'https://dashboard-rb-1.vercel.app/' },
